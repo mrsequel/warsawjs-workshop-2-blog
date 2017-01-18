@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie - WJS Workshop #2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <script type="text/html" id="template-post-add-form-component">
+        <form class="card-panel" id="addPost">
+            Tytuł: <input type="text" class="blue-text" name="title">
+            Treść: <input type="text" class="red-text" name="description">
+            <button class="btn black" type="submit" name="confirm">Wyślij</button>
+        </form>
+    </script>
+
+    <script type="text/html" id="template-post-component">
+        <div class="post card-panel" id="listOfPost">
+            <h1 id="post-title"><a href="#!/posts/{{id}}/">{{title}}</a></h1><br>
+            <hr>
+            <p class="red-text" id="post-content">{{description}}</p><br>
+        </div>
+    </script>
+    <h1>BLOG</h1>
+    <hr>
+    <div id="page"></div>
+
+    <script src="node_modules/mustache/mustache.js"></script>
+    <script src="node_modules/super-event-emitter/dist/super-event-emitter.js"></script>
+    <script src="node_modules/grapnel/dist/grapnel.min.js"></script>
+    <script src="https://wzrd.in/standalone/uuid"></script>
+
+    <script src="scripts/namespace.js"></script>
+    <script src="scripts/components/post-add-form-component.js"></script>
+    <script src="scripts/components/post-component.js"></script>
+    <script src="scripts/controllers/post-controller.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
