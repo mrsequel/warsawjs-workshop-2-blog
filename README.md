@@ -2,4 +2,4 @@
 
 :ledger:
 
-> Zadanie - WJS Workshop #2
+> Task - WJS Workshop #2
